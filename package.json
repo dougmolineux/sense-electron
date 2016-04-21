@@ -1,0 +1,33 @@
+{
+  "name": "sense-electron",
+  "productName": "sense-electron",
+  "version": "0.0.0",
+  "description": "Sense packaged in Electron",
+  "main": "index.js",
+  "repository": "<update me>",
+  "author": {
+    "name": "Doug Molineux",
+    "email": "doug.molineux@gmail.com"
+  },
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "scripts": {
+    "start": "electron .",
+    "kibana": "./kibana/bin/kibana plugin --remove sense && ./kibana/bin/kibana plugin --install elastic/sense",
+    "build": "electron-packager . $npm_package_productName --prune --ignore=node_modules/electron-prebuilt --ignore=node_modules/electron-packager --ignore=.git"
+  },
+  "files": [
+    "index.js",
+    "index.html",
+    "index.css"
+  ],
+  "keywords": [
+    "electron-app"
+  ],
+  "devDependencies": {
+    "electron-builder": "^2.0.0",
+    "electron-packager": "^7.0.0",
+    "electron-prebuilt": "^0.35.0"
+  }
+}
